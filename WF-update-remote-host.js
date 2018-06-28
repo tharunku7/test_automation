@@ -3,9 +3,9 @@
 // submit to script
 var ecc = new GlideRecord("ecc_queue");  
 ecc.initialize();  
-ecc.agent = "mid.server.ServiceNowMid.<your_domain>";  
+ecc.agent = "mid.server.MIDSERVER1";  
 ecc.topic = "Command";        
-ecc.name = "powershell c:\\scripts\\update-IP-remote-host.ps1 -IPAddress " + ipaddy + " -Remhost " + remhost;
+ecc.name = "powershell c:\\scripts\\update-IP-remote-host.ps1 -IPAddress " + workflow.scratchpad.freeIP + " -Remhost " + remhost;
 ecc.queue = "output";  
 ecc.state = "ready"; 
 var ecc_sysid = ecc.insert();         
