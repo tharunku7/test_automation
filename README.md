@@ -10,7 +10,7 @@ NOTE: this documentation is a work-in-progress
 
 ### Prerequisites
 
-In order for the PS Remoting to work, you will, of course, have to have admin access on the remote machine. I created a special AD account for this purpose and stuck it in the local admin group via group policy.  Easy enough.
+In order for the PS Remoting to work, you will, of course, have to have admin access on the remote machine. I created a special AD account for this purpose and stuck it in the local admin group via group policy. I also [created a GPO](https://www.techrepublic.com/article/how-to-enable-powershell-remoting-via-group-policy/) that enables PS Remoting on client computers.
 
 For the remote workstation name, it was easy enough for me to get because I had created an audit script that runs at logon.  When users log in, the audit script stores their username and hostname (among other things) in a MySQL table.  So, it was pretty easy for me to find out the name of the remote workstation to give a static IP.  
 
