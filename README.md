@@ -14,6 +14,8 @@ In order for the PS Remoting to work, you will, of course, have to have admin ac
 
 For the remote workstation name, it was easy enough for me to get because I had created an audit script that runs at logon.  When users log in, the audit script stores their username and hostname (among other things) in a MySQL table.  So, it was pretty easy for me to find out the name of the remote workstation to give a static IP.  
 
-On this catalog item request form, I've added a "workstation" variable.  This allow the user to provide the name of their workstation.
+On this catalog item request form, I've added a "workstation" variable.  This allows the user to provide the name of their workstation.  I'm personally not a fan of this method because it allows for user error.  However, other developers may not have the kind of enterprise access I had when this was conceived. 
+
+
 
 ![alt workflow](https://gitlab.com/rpoore/snipam/raw/master/wf.png)
